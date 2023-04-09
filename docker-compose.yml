@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  nt-rabbitmq: 
+    image: rabbitmq:3-management
+    container_name: nt-rabbitmq
+    # hostname: nt-rabbitmq
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=1jj395qu
+      # - RABBITMQ_ERLANG_COOKIE='cookie_for_clustering'
+
